@@ -14,6 +14,15 @@ cap = cv2.VideoCapture(0)
 width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)) #there are other frame options
 height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
+"""rectangle dimensions"""
+# top left corner of rectangle
+# x = width // 2
+# y = height // 2
+#
+# # dimensions of rectangle for drawing
+# w = width // 4
+# h = height // 4
+
 """filename, codec (divx is for windows), fps(20-30 value), (width, height)"""
 # windows = *'DIVX'
 # linux or max = *'XVID'
@@ -50,6 +59,7 @@ while True:
         # cv2.imshow('my video frame', flipImg);
 
         """draw on frame"""
+        # drawImg = cv2.rectangle(frame, pt1=(x,y), pt2=(x+w,y+h), color=(0, 255, 0), thickness=4)
         # drawImg = cv2.rectangle(frame, pt1=(384, 10), pt2=(500, 150), color=(0, 255, 0), thickness=10)
         # cv2.imshow('my video frame', drawImg);
 
